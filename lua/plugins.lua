@@ -14,15 +14,24 @@ local plugins = { -- Plugins that modify the look of Neovim
     dependencies = {"nvim-lua/plenary.nvim", "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
     "MunifTanjim/nui.nvim"}
 }, {"kyazdani42/nvim-web-devicons"
-}, {"EdenEast/nightfox.nvim"}, -- Plugins that change editor commands
+}, {"EdenEast/nightfox.nvim"}, 
+
+-- Plugins that change editor commands
 {
     "tpope/vim-dispatch",
     opt = true,
     cmd = {"Dispatch", "Make", "Focus", "Start"}
 }, {"adelarsq/neofsharp.vim"}, {"nvim-lua/plenary.nvim"}, {"nvim-telescope/telescope.nvim"},
 {"nvim-treesitter/nvim-treesitter"}, {"tpope/vim-fugitive"}, {"preservim/nerdcommenter"}, {"tpope/vim-surround"},
+-- Language support
+{"kaarmu/typst.vim"}, {"udalov/kotlin-vim"}, {"rust-lang/rust.vim"}, 
+-- Formatting
+{
+  'stevearc/conform.nvim',
+  opts = {},
+},
 
-{"kaarmu/typst.vim"}, {"udalov/kotlin-vim"}, {"rust-lang/rust.vim"}, -- Coc
+-- Coc
 {"neoclide/coc-tabnine"}, {
     "neoclide/coc.nvim",
     branch = "release"

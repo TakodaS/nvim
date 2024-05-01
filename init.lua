@@ -1,16 +1,15 @@
 local g = vim.g
 g.mapleader = " "
 --init entrypoint for nvim config
-if not pcall(require, 'bootstrap') then
-  print("Failed to bootstrap lazy")
+if not pcall(require, "bootstrap") then
+	print("Failed to bootstrap lazy")
 end
-if not pcall(require, 'plugins') then
-  print("Failed to initialize plugins")
+if not pcall(require, "plugins") then
+	print("Failed to initialize plugins")
 end
-if not pcall(require, 'plugin-config') then
-  print("Failed to configure plugins")
+if not pcall(require, "plugin-config") then
+	print("Failed to configure plugins")
 end
-
 
 local cmd = vim.cmd
 local fn = vim.fn
@@ -44,10 +43,8 @@ opt.termguicolors = true -- truecolor support
 opt.wildmode = { "list", "longest" } -- command-line completion mode
 opt.wrap = false -- disable line wrap
 
-
-
 vim.keymap.set("n", "<leader>e", "<cmd>e $MYVIMRC<cr>")
-vim.keymap.set("n", "<leader>s", "<cmd>source $MYVIMRC<cr>")
+vim.keymap.set("n", "<leader>s", "<cmd>luafile $MYVIMRC<cr>")
 vim.keymap.set("n", ";", ":")
 vim.keymap.set("n", ":", ";")
 vim.keymap.set("i", "jk", "<Esc>")
