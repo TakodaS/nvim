@@ -1,3 +1,10 @@
+-- Lualine
+require("lualine").setup({
+	options = {
+		section_separators = { "", "" },
+		component_separators = { "", "" },
+	},
+})
 -- Conform formatter
 require("conform").setup({
 	formatters_by_ft = {
