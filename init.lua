@@ -8,30 +8,17 @@ end
 if not pcall(require, 'plugins') then
   print("Failed to initialize plugins")
 end
-print("Configuring settings...")
-require("neo-tree").setup({
-	filesystem = {
-		hijack_netrw_behavior = "open_current",
-	},
-	window = {
-		mappings = {
-			["P"] = function(state)
-				local node = state.tree:get_node()
-				require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
-			end,
-		},
-	},
-})
-vim.api.nvim_exec("nnoremap - :Neotree toggle current reveal_force_cwd<cr>", false)
---vim.api.nvim_exec("nnoremap | :Neotree reveal<cr>", false) --broken?
-require("nvim-web-devicons").setup()
+if not pcall(require, 'plugin-config') then
+  print("Failed to configure plugins")
+end
+
+
 local cmd = vim.cmd
 local fn = vim.fn
 local g = vim.g
 local opt = vim.opt
 --# Set global options
 vim.api.nvim_exec("set ff=unix", false)
-vim.cmd("colorscheme duskfox")
 opt.autoread = true
 opt.background = "dark"
 opt.completeopt = { "menuone", "noinsert", "noselect" } -- completion options (for deoplete)
@@ -59,11 +46,6 @@ opt.wildmode = { "list", "longest" } -- command-line completion mode
 opt.wrap = false -- disable line wrap
 
 g.mapleader = " "
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
 vim.keymap.set("n", "<leader>e", "<cmd>e $MYVIMRC<cr>")
 vim.keymap.set("n", "<leader>s", "<cmd>source $MYVIMRC<cr>")
@@ -81,4 +63,3 @@ vim.api.nvim_exec("set wrap", false)
 -- Autogroups
 
 -- User defined commands
-vim.cmd('command! Chat CopilotChat')
