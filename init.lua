@@ -1,3 +1,5 @@
+local g = vim.g
+g.mapleader = " "
 --init entrypoint for nvim config
 if not pcall(require, 'bootstrap') then
   print("Failed to bootstrap lazy")
@@ -12,7 +14,7 @@ end
 
 local cmd = vim.cmd
 local fn = vim.fn
-local g = vim.g
+
 local opt = vim.opt
 --# Set global options
 vim.api.nvim_exec("set ff=unix", false)
@@ -42,7 +44,7 @@ opt.termguicolors = true -- truecolor support
 opt.wildmode = { "list", "longest" } -- command-line completion mode
 opt.wrap = false -- disable line wrap
 
-g.mapleader = " "
+
 
 vim.keymap.set("n", "<leader>e", "<cmd>e $MYVIMRC<cr>")
 vim.keymap.set("n", "<leader>s", "<cmd>source $MYVIMRC<cr>")

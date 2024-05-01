@@ -11,6 +11,8 @@ require("neo-tree").setup({
 		},
 	},
 })
+
+
 vim.api.nvim_exec("nnoremap - :Neotree toggle current reveal_force_cwd<cr>", false)
 --vim.api.nvim_exec("nnoremap | :Neotree reveal<cr>", false) --broken?
 require("nvim-web-devicons").setup()
