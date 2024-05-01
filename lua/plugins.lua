@@ -43,11 +43,9 @@ local plugins = { -- Plugins that modify the look of Neovim
 		opts = {},
 	},
 
-	-- Coc
-	{ "neoclide/coc-tabnine" },
+	-- Mason
 	{
-		"neoclide/coc.nvim",
-		branch = "release",
+		"williamboman/mason.nvim",
 	}, -- Copilot functionality
 	{ "github/copilot.vim" },
 	{

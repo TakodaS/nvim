@@ -1,3 +1,5 @@
+-- Mason
+require("mason").setup()
 -- Lualine
 require("lualine").setup({
 	options = {
@@ -14,6 +16,7 @@ require("conform").setup({
 		-- Use a sub-list to run only the first available formatter
 		javascript = { { "prettierd", "prettier" } },
 		typescript = { { "prettierd", "prettier" } },
+		typst = { "typstfmt" },
 		json = { "prettierd" },
 		rust = { "rustfmt" },
 		go = { "gofmt", "goimports" },
