@@ -1,0 +1,44 @@
+{
+  // Require .prettierrc
+  //"prettier.requireConfig": true,
+
+  // Tslint on save
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": true,
+
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.useQuickfixForLocations": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.snippetIndicator": true,
+  "coc.preferences.enableFloatBufTag": true,
+  "coc.preferences.willSaveHandlerTimeout": 5000,
+  "coc.preferences.jumpCommand": "vsplit",
+  "coc.preferences.enableMessageFloat": true,
+  "coc.preferences.enableHighlightLineNumber": true,
+  "coc.preferences.semanticTokensHighlights": true,
+  "coc.preferences.formatOnType": false,
+  "coc.preferences.maxCompleteItemCount": 10,
+  "coc.preferences.maxPreviewWidth": 80,
+  "coc.preferences.maxAnalyzeFileSize": 1024000,
+  "coc.preferences.diagnostic.refreshOnInsertMode": false,
+  "coc.preferences.diagnostic.virtualText": true,
+  "coc.preferences.diagnostic.virtualTextDelay": 200,
+  "coc.preferences.diagnostic.virtualTextPrefix": "■",
+  "coc.preferences.diagnostic.enableMessageSign": true,
+  "coc.preferences.diagnostic.messageTarget": "float",
+  "coc.preferences.diagnostic.checkCurrentLine": true,
+  "coc.preferences.diagnostic.enable": true,
+  "coc.preferences.diagnostic.level": "hint",
+  "coc.preferences.diagnostic.displayByAle": false,
+  "coc.preferences.diagnostic.errorSign": ">>",
+  "coc.preferences.diagnostic.warningSign": ">>",
+  "coc.preferences.diagnostic.infoSign": ">>",
+  "coc.preferences.diagnostic.hintSign": ">>",
+  "coc.preferences.diagnostic.signOffset": 1000000,
+  "coc.preferences.diagnostic.signPriority": 10,
+  "coc.preferences.filetypeMap": {
+    "javascript.jsx": "javascriptreact",
+    "typescript.tsx": "typescriptreact"
+  }
+}
