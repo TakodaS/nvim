@@ -44,9 +44,10 @@ local plugins = { -- Plugins that modify the look of Neovim
 	},
 
 	-- Mason
-	{
-		"williamboman/mason.nvim",
-	}, -- Copilot functionality
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
+	"neovim/nvim-lspconfig",
+	-- Copilot functionality
 	{ "github/copilot.vim" },
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",

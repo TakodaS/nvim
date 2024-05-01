@@ -1,5 +1,12 @@
 -- Mason
 require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = { "lua_ls", "rust_analyzer" },
+})
+require("lspconfig").lua_ls.setup({}) -- python
+require("lspconfig").ruff.setup({}) -- python
+require("lspconfig").rust_analyzer.setup({})
+require("lspconfig").typst_lsp.setup({})
 -- Lualine
 require("lualine").setup({
 	options = {
