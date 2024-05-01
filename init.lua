@@ -9,19 +9,19 @@ if not pcall(require, 'plugins') then
   print("Failed to initialize plugins")
 end
 print("Configuring settings...")
--- require("neo-tree").setup({
--- 	filesystem = {
--- 		hijack_netrw_behavior = "open_current",
--- 	}
--- 	window = {
--- 		mappings = {
--- 			["P"] = function(state)
--- 				local node = state.tree:get_node()
--- 				require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
--- 			end,
--- 		},
--- 	},
--- })
+require("neo-tree").setup({
+	filesystem = {
+		hijack_netrw_behavior = "open_current",
+	},
+	window = {
+		mappings = {
+			["P"] = function(state)
+				local node = state.tree:get_node()
+				require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+			end,
+		},
+	},
+})
 vim.api.nvim_exec("nnoremap - :Neotree toggle current reveal_force_cwd<cr>", false)
 --vim.api.nvim_exec("nnoremap | :Neotree reveal<cr>", false) --broken?
 require("nvim-web-devicons").setup()
