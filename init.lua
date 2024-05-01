@@ -1,7 +1,4 @@
 --init entrypoint for nvim config
-if not pcall(require, 'test') then
-  print("Could not load test")
-end
 if not pcall(require, 'bootstrap') then
   print("Failed to bootstrap lazy")
 end

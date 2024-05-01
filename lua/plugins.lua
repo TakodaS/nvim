@@ -36,6 +36,4 @@ local plugins = { -- Plugins that modify the look of Neovim
     }
 }}
 
-print("Initializing plugins")
 lazy.setup(plugins)
-print("Plugins initialized")
