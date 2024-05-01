@@ -1,13 +1,10 @@
 -- load plugins in a safe manner
 local lazy = require('lazy')
-
-
 local plugins = {
 	{"tpope/vim-dispatch",
 	opt = true,
 	cmd = { "Dispatch", "Make", "Focus", "Start" },
         },
-
 	{ "adelarsq/neofsharp.vim" },
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-telescope/telescope.nvim" },
@@ -42,12 +39,6 @@ local plugins = {
 	},
 	{ "EdenEast/nightfox.nvim" },
 }
-print("Loading plugins")
-for _, plugin in ipairs(plugins) do
-  local ok, err = pcall(function() lazy.use(plugin) end)
-  if not ok then
-    print("Failed to load plugin: " .. plugin)
-    print("Error: " .. err)
-  end
-end
-return 0
+print("Initializing plugins")
+lazy.setup(plugins)
+print("Plugins initialized")

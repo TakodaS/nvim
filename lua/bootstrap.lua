@@ -11,5 +11,3 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-print("Lazy path: " .. lazypath)
-return 0
