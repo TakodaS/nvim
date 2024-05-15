@@ -32,6 +32,15 @@ local plugins = { -- Plugins that modify the look of Neovim
 	{ "tpope/vim-fugitive" },
 	{ "preservim/nerdcommenter" },
 	{ "tpope/vim-surround" },
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {},
+	},
 	-- Language support
 	{ "adelarsq/neofsharp.vim" },
 	{ "kaarmu/typst.vim" },

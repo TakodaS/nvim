@@ -55,7 +55,3 @@ vim.api.nvim_exec("set shellcmdflag=-command", false)
 vim.api.nvim_exec('set shellquote="', false)
 vim.api.nvim_exec("set shellxquote=", false)
 vim.api.nvim_exec("set wrap", false)
-
--- Autogroups
-
--- User defined commands

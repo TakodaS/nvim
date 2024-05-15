@@ -22,5 +22,6 @@
   "typst.vim": { "branch": "main", "commit": "d9a7650e76c85f8ba437e056d08dd43b01b8bfd6" },
   "vim-dispatch": { "branch": "master", "commit": "4c695bc052cad2ae6b980aebbe48d046466e27ae" },
   "vim-fugitive": { "branch": "master", "commit": "dac8e5c2d85926df92672bf2afb4fc48656d96c7" },
-  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" }
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
+  "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }
